@@ -61,20 +61,28 @@ biorxiv_publisher <- function(prefix = NULL, from = NULL, to = NULL,
   }
 
   # Count returned resulted
-  count_results <- content$messages[[1]]$count
+  count_results <- as.numeric(content$messages[[1]]$count)
 
   # Count expected results. The expected number of results returned may
   # differ from the actual number returned
-  expected_results <- content$messages[[1]]$total
+  expected_results <- as.numeric(content$messages[[1]]$total)
 
-  # Maximum number of results returned per query is 100
-  max_results_per_page <- 100
+  # Convert skip to numeric to ensure limit is calculated
+  skip <- as.numeric(skip)
 
   # If user requests all results, set limit to maximum number of expected
   # results minus the number of skipped records
   if (limit == "*") {
     limit <- expected_results - skip
   }
+
+  # Check for errors in limit and count_results
+  if (is.na(limit) || is.na(count_results) || is.na(expected_results)) {
+    stop("One of the numeric parameters is not valid.", call. = F)
+  }
+
+  # Maximum number of results returned per query is 100
+  max_results_per_page <- 100
 
   # If the limit is less than the number of returned results, return only
   # those up to the limit
@@ -117,7 +125,7 @@ biorxiv_publisher <- function(prefix = NULL, from = NULL, to = NULL,
       data <- c(data, content$collection)
 
       # Count the number of results returned in iteration
-      count_results <- content$messages[[1]]$count
+      count_results <- as.numeric(content$messages[[1]]$count)
 
       # If number of results returned is less than expected in a whole page,
       # end iteration

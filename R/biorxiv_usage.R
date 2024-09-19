@@ -15,7 +15,7 @@
 #' biorxiv_usage(interval = "m", format = "df")
 #'
 #' # Return annual usage statistics
-#' biorxiv_usage(interval = "y")
+#' #biorxiv_usage(interval = "y")
 #' }
 biorxiv_usage <- function(interval = "m", format = "list") {
 

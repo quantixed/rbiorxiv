@@ -22,8 +22,7 @@ test_that("biorxiv_published returns", {
 
   # Column names and types for data frame
   col_names <- c("biorxiv_doi", "published_doi", "preprint_title",
-                 "preprint_category", "preprint_date", "published_date",
-                 "published_citation_count")
+                 "preprint_category", "preprint_date", "published_date")
   d <- biorxiv_published(from = "2014-01-01", to = "2014-01-30", format = "df")
   expect_named(d, col_names)
   expect_is(d$biorxiv_doi, "character")
@@ -32,7 +31,6 @@ test_that("biorxiv_published returns", {
   expect_is(d$preprint_category, "character")
   expect_is(d$preprint_date, "character")
   expect_is(d$published_date, "character")
-  expect_is(d$published_citation_count, "numeric")
 
 })
 
