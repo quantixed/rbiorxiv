@@ -98,7 +98,7 @@ biorxiv_publisher(prefix = "10.7554", from = "2018-01-01", to = "2018-01-10",
 Retrieve summary statistics for bioRxiv content (e.g. number of preprints deposited):
  
 ```{r eval=FALSE}
-# Get summary statistics at a montly level
+# Get summary statistics at a monthly level
 biorxiv_summary(interval = "m")
 
 # Get summary statistics at a yearly level
@@ -110,9 +110,9 @@ biorxiv_summary(interval = "y")
 Retrieve summary statistics for usage of bioRxiv content (e.g. number of pdf downloads):
 
 ```{r eval=FALSE}
-# Get usage statistics at a montly level
+# Get usage statistics at a monthly level
 biorxiv_usage(interval = "m")
 
 # Get usage statistics at a yearly level
-biorxiv_usage(interval = "y")
+#biorxiv_usage(interval = "y") # not curently working
 ```

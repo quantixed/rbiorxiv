@@ -5,3 +5,4 @@
 .Rbuildignore
 inst/doc
 CRAN-RELEASE
+.DS_Store

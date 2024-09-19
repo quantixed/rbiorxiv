@@ -102,7 +102,7 @@ Retrieve summary statistics for bioRxiv content (e.g. number of
 preprints deposited):
 
 ``` r
-# Get summary statistics at a montly level
+# Get summary statistics at a monthly level
 biorxiv_summary(interval = "m")
 
 # Get summary statistics at a yearly level
@@ -115,11 +115,11 @@ Retrieve summary statistics for usage of bioRxiv content (e.g. number of
 pdf downloads):
 
 ``` r
-# Get usage statistics at a montly level
+# Get usage statistics at a monthly level
 biorxiv_usage(interval = "m")
 
 # Get usage statistics at a yearly level
-biorxiv_usage(interval = "y")
+#biorxiv_usage(interval = "y") # currently not working
 ```
 
 ## API rate and usage limits
