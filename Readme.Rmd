@@ -129,7 +129,7 @@ Retrieve summary statistics for usage of bioRxiv content (e.g. number of pdf dow
 biorxiv_usage(interval = "m")
 
 # Get usage statistics at a yearly level
-#biorxiv_usage(interval = "y") # currently not working
+biorxiv_usage(interval = "y")
 ```
 
 ## API rate and usage limits

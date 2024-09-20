@@ -26,6 +26,6 @@ biorxiv_usage(interval = "m")
 biorxiv_usage(interval = "m", format = "df")
 
 # Return annual usage statistics
-#biorxiv_usage(interval = "y")
+biorxiv_usage(interval = "y")
 }
 }

@@ -119,7 +119,7 @@ pdf downloads):
 biorxiv_usage(interval = "m")
 
 # Get usage statistics at a yearly level
-#biorxiv_usage(interval = "y") # currently not working
+biorxiv_usage(interval = "y")
 ```
 
 ## API rate and usage limits
